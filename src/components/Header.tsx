@@ -11,20 +11,21 @@ export function Header({ title, ...rest }: Props) {
   return (
     <HStack
       w="full"
-      justifyContent="space-between"
       alignItems="center"
+      justifyContent="space-between"
       bg="gray.600"
       pb={6}
       pt={12}
       {...rest}
     >
-      <IconButton as={<CaretLeft color={colors.gray[300]} />} size={24} />
+      <IconButton icon={<CaretLeft color={colors.gray[200]} />} size={10} />
       <Heading
         color="gray.100"
         fontSize="lg"
         textAlign="center"
         flex={1}
-        ml={-6}
+        mt={-1}
+        ml={-10}
       >
         {title}
       </Heading>

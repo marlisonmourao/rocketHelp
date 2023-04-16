@@ -17,6 +17,7 @@ import {
 export type OrderProps = {
   id: string
   patrimony: string
+  description: string
   when: string
   status: 'open' | 'closed'
 }

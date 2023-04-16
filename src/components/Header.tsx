@@ -26,7 +26,7 @@ export function Header({ title, ...rest }: Props) {
     >
       <IconButton
         icon={<CaretLeft color={colors.gray[200]} />}
-        size={14}
+        size={16}
         onPress={handleGoBack}
       />
       <Heading

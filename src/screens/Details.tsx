@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import { Alert } from 'react-native'
+
 import { Box, HStack, ScrollView, Text, VStack, useTheme } from 'native-base'
 import firestore from '@react-native-firebase/firestore'
 import { OrderFirestoreDTO } from '../DTOs/OrderFirestoreDTO'
@@ -13,12 +15,11 @@ import {
   CircleWavyCheck,
   Hourglass,
   DesktopTower,
-  Clipboard,
+  ClipboardText,
 } from 'phosphor-react-native'
 import { CardDetails } from '@components/CardDetails'
 import { Input } from '@components/Input'
 import { Button } from '@components/Button'
-import { Alert } from 'react-native'
 
 type RouteParams = {
   orderId: string
@@ -127,13 +128,13 @@ export function Details() {
           title="equipamento"
           description={`Património: ${order.patrimony}`}
           icon={DesktopTower}
-          footer={order.when}
         />
 
         <CardDetails
           title="descrição do problema"
           description={order.description}
-          icon={Clipboard}
+          icon={ClipboardText}
+          footer={`Registrado em ${order.when}`}
         />
         <CardDetails
           title="solução"
